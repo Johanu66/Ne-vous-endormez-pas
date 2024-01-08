@@ -18,3 +18,8 @@ int Room::price() const {
 void Room::updatePrice(int price) {
     _price = price;
 }
+
+std::ostream& operator<<(std::ostream& os, const Room& r){
+  os << "Chambre " << r.type() << " numero " << r.number() << " à " << r.price() << "€ la nuitée";
+  return os;
+}

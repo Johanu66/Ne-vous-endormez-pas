@@ -16,4 +16,6 @@ class Room{
     void updatePrice(int price);
 };
 
+std::ostream& operator<<(std::ostream& os, const Room& r);
+
 #endif

@@ -5,12 +5,12 @@
 
 class Room{
   private:
-    int _number;
+    std::string _id;
     std::string _type;
     int _price;
   public:
-    Room(int number, std::string type, int price);
-    int number() const;
+    Room(std::string id, std::string type, int price);
+    std::string id() const;
     std::string type() const;
     int price() const;
     void updatePrice(int price);

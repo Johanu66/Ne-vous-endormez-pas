@@ -36,7 +36,7 @@ void Hotel::addRoom(Room& room) {
 
 void Hotel::removeRoom(Room& room) {
     _rooms.erase(std::remove_if(_rooms.begin(), _rooms.end(), 
-        [room](Room valeur){ return valeur.type() == room.type() && valeur.number() == room.number(); }),
+        [room](Room valeur){ return valeur.type() == room.type() && valeur.id() == room.id(); }),
         _rooms.end()
     );
 }

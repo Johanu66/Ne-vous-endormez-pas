@@ -1,10 +1,10 @@
 #include "room.h"
 
-Room::Room(int number, std::string type, int price)
-    : _number(number), _type(type), _price(price) {}
+Room::Room(std::string id, std::string type, int price)
+    : _id(id), _type(type), _price(price) {}
 
-int Room::number() const {
-    return _number;
+std::string Room::id() const {
+    return _id;
 }
 
 std::string Room::type() const {
@@ -20,6 +20,6 @@ void Room::updatePrice(int price) {
 }
 
 std::ostream& operator<<(std::ostream& os, const Room& r){
-  os << "Chambre " << r.type() << " numero " << r.number() << " à " << r.price() << "€ la nuitée";
+  os << "Chambre " << r.type() << " numero " << r.id() << " à " << r.price() << "€ la nuitée";
   return os;
 }
